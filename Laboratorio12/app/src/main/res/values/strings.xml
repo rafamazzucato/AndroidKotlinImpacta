@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Laboratorio12</string>
+
+    <!-- Nome -->
+    <string name="titulo_login">Login</string>
+    <string name="rotulo_tv_nome">Nome</string>
+    <string name="hint_et_nome">Digite o seu nome</string>
+    <!-- Senha -->
+    <string name="rotulo_tv_senha">Senha</string>
+    <string name="hint_et_senha">Digite a sua senha</string>
+    <!-- Botoes -->
+    <string name="rotulo_btn_cancelar">Cancelar</string>
+    <string name="rotulo_btn_login">Login</string>
+    <string name="alerta_erro_nome_obrigatorio">Erro: Nome é obrigatório</string>
+    <string name="alerta_erro_senha_obrigatoria">Erro: Senha é obrigatória</string>
+    <string name="alerta_erro_credenciais_invalidas">Erro: Credenciais inválidas!!!</string>
+    <string name="alerta_credenciais_validas">Credenciais válidas!!!</string>
 </resources>
