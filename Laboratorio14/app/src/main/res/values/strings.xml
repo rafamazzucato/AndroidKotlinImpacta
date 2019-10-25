@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Laboratorio14</string>
+    <string name="titulo_action">Lista de Ações</string>
+    <string name="celula_label_heroi">Nosso Heroi</string>
+</resources>
