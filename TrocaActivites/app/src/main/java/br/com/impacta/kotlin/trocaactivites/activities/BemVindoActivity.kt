@@ -14,8 +14,8 @@ class BemVindoActivity : DebugActivity() {
         setContentView(R.layout.bem_vindo_activity)
 
         val intent = getIntent()
-        val args = intent.extras
-        val nome = args.getString("nome")
+        val extras = intent.extras
+        val nome = extras.getString("nome")
 
         txtBemVindo.text = nome
     }

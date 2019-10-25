@@ -14,9 +14,6 @@ class MainActivity : DebugActivity() {
         setContentView(R.layout.activity_main)
 
         val intent = Intent(this, BemVindoActivity::class.java)
-        val params = Bundle()
-        params.putString("nome", "Rafael Thomazelli")
-        intent.putExtras(params)
         startActivity(intent)
         //finish()
     }

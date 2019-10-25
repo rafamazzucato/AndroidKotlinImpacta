@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Laboratorio13</string>
+
+    <string name="titulo_credito">Credito</string>
+    <string name="rotulo_tv_nome">Nome</string>
+    <string name="rotulo_tv_idade">Idade</string>
+    <string name="rotulo_btn_analisar_credito">Analisar Credito</string>
+    <string name="alerta_erro_nome_obrigatorio">Erro: Nome é Obrigatório!!!</string>
+    <string name="alerta_erro_idade_obrigatoria">Erro: Idade é Obrigatória!!!</string>
+    <string name="alerta_erro_idade_invalida">Erro: Idade Inválida!!!</string>
+</resources>
