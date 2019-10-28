@@ -5,13 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import br.com.impacta.kotlin.laboratorio14.R
 import br.com.impacta.kotlin.laboratorio14.utils.HM
-import br.com.impacta.kotlin.laboratorio14.utils.HMAux
-import kotlinx.android.synthetic.main.celula.*
 import kotlinx.android.synthetic.main.celula.view.*
 
 
