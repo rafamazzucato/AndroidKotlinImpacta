@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Laboratorio15</string>
+    <string name="telainicial_titulo">Tela Inicial</string>
+    <string name="telainicial_rotulo_btn_chamada_simples">Chamada Simples</string>
+    <string name="telainicial_rotulo_btn_chamada_com_retorno">Chamada Com Retorno</string>
+    <string name="telainicial_alerta_retorno_cancelado">Cancelado!!!</string>
+    <string name="segundatela_titulo">Segunda Tela</string>
+    <string name="segundatela_rotulo_valor_original">Valor Original</string>
+    <string name="segundatela_rotulo_btn_multiplicar_5">Multiplicar * 5</string>
+</resources>

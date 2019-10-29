@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:padding="30dp">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/segundatela_titulo"
+            android:textSize="20sp" />
+    <TextView
+            android:id="@+id/tv_valor_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/segundatela_rotulo_valor_original"
+            android:textSize="20sp" />
+    <Button
+            android:id="@+id/btnMultiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/segundatela_rotulo_btn_multiplicar_5" />
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="" />
+    </RelativeLayout>
+
+
+</LinearLayout>
