@@ -39,7 +39,7 @@ class DetalheActivity : AppCompatActivity() {
             nome = nome, telefone = telefone, idade = idade
         )
 
-        contatoDAO.inserirContato(contato)
+        val result = contatoDAO.inserirContato(contato)
         finish()
     }
 }
