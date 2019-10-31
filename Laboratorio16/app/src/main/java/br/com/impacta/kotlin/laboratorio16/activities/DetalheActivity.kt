@@ -28,23 +28,19 @@ class DetalheActivity : Laboratorio16AbstractActivity() {
     }
 
     private fun initVars(){
-        val idContato = intent.getIntExtra(Constantes.PARAMETRO_ID, -1)
-        if(idContato != -1){
-            val contato = contatoDAO.obterContatoByID(idContato)
+        val contato = intent.getSerializableExtra(Constantes.PARAMETRO_ID) as? Contato
+        if(contato != null){
+            et_codigo.setText(contato.idContato.toString())
+            et_nome.setText(contato.nome)
+            et_telefone.setText(contato.telefone)
+            et_idade.setText(contato.idade.toString())
 
-            if(contato != null){
-                et_codigo.setText(contato.idContato.toString())
-                et_nome.setText(contato.nome)
-                et_telefone.setText(contato.telefone)
-                et_idade.setText(contato.idade.toString())
+            btn_apagar.text = getString(R.string.detalhes_rotulo_btn_apagar)
+            btn_apagar.setOnClickListener { confirmarOperacao() }
 
-                btn_apagar.text = getString(R.string.detalhes_rotulo_btn_apagar)
-                btn_apagar.setOnClickListener { confirmarOperacao() }
-
-                btn_salvar.text = getString(R.string.detalhes_rotulo_btn_atualizar)
-                btn_salvar.setOnClickListener { salvar(true) }
-                return
-            }
+            btn_salvar.text = getString(R.string.detalhes_rotulo_btn_atualizar)
+            btn_salvar.setOnClickListener { salvar(true) }
+            return
         }
 
         btn_salvar.setOnClickListener { salvar(false) }

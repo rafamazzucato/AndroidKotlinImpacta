@@ -47,7 +47,7 @@ class MainActivity : Laboratorio16AbstractActivity() {
         listaContatos.onItemClickListener = AdapterView.OnItemClickListener {
                 parent, view, position, id ->
             val contato = parent.getItemAtPosition(position) as Contato
-            chamarTD(contato.idContato)
+            chamarTD(contato)
         }
     }
 }

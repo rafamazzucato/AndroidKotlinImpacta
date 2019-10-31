@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import br.com.impacta.kotlin.laboratorio16.R
+import br.com.impacta.kotlin.laboratorio16.models.Contato
 import br.com.impacta.kotlin.laboratorio16.utils.Constantes
 
 open class Laboratorio16AbstractActivity : AppCompatActivity(){
@@ -18,15 +19,15 @@ open class Laboratorio16AbstractActivity : AppCompatActivity(){
         val id = item.itemId
 
         if (id == R.id.actionhugo_novo_contato) {
-            chamarTD(-1)
+            chamarTD(null)
             return true
         }
         return super.onOptionsItemSelected(item)
     }
 
-    protected fun chamarTD(id: Int) {
+    protected fun chamarTD(contato: Contato?) {
         val mIntent = Intent(this, DetalheActivity::class.java)
-        mIntent.putExtra(Constantes.PARAMETRO_ID, id)
+        mIntent.putExtra(Constantes.PARAMETRO_ID, contato)
         startActivity(mIntent)
     }
 }
