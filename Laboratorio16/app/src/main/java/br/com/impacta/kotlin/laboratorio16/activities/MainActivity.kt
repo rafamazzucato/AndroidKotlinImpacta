@@ -26,7 +26,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial)
+    }
 
+
+    override fun onResume() {
+        super.onResume()
         initVars()
         initActions()
     }
@@ -48,7 +52,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initVars() {
-
         val contatos = contatoDAO.obterListaContatos()
 
         listaContatos.adapter = ContatosAdapter(

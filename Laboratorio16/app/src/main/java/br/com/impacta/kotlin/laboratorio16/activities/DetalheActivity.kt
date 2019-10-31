@@ -31,7 +31,6 @@ class DetalheActivity : AppCompatActivity() {
     }
 
     private fun adicionar() {
-        //val codigo = et_codigo.text.toString().toLong()
         val nome = et_nome.text.toString()
         val telefone = et_telefone.text.toString()
         val idade = et_idade.text.toString().toInt()

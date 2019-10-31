@@ -20,11 +20,13 @@ class ContatoDAO(context : Context) : DAO(context) {
     }
 
     fun inserirContato(contato: Contato) : Long {
+        val db = dbHelper.writableDatabase
         val cv = parseContentValues(contato)
         return db.insert(TABELA, null, cv)
     }
 
     fun alterarContato(contato: Contato) : Int {
+        val db = dbHelper.writableDatabase
         val filtro = "$IDCONTATO = ? "
         val argumentos = arrayOf(contato.idContato.toString())
         val cv = parseContentValues(contato)
@@ -33,12 +35,14 @@ class ContatoDAO(context : Context) : DAO(context) {
     }
 
     fun apagarContato(idcontato: Long) : Int {
+        val db = dbHelper.writableDatabase
         val filtro = "$IDCONTATO = ? "
         val argumentos = arrayOf(idcontato.toString())
         return db.delete(TABELA, filtro, argumentos)
     }
 
     fun obterContatoByID(idcontato: Long): Contato? {
+        val db = dbHelper.readableDatabase
         var cAux: Contato? = null
 
         try {
@@ -58,6 +62,7 @@ class ContatoDAO(context : Context) : DAO(context) {
     }
 
     fun obterListaContatos(): ArrayList<Contato> {
+        val db = dbHelper.readableDatabase
         val dados = ArrayList<Contato>()
         var cAux: Contato? = null
         try {
@@ -81,7 +86,7 @@ class ContatoDAO(context : Context) : DAO(context) {
     private fun parseContentValues(contato : Contato) : ContentValues{
         val cv = ContentValues()
 
-        if(contato.idContato != -1L){
+        if(contato.idContato != -1){
             cv.put(IDCONTATO, contato.idContato)
         }
 
@@ -94,7 +99,7 @@ class ContatoDAO(context : Context) : DAO(context) {
 
     private fun parseCursortoObject(cursor: Cursor) : Contato?{
         if(cursor.count > 0){
-            val idContato = cursor.getLong(cursor.getColumnIndex(IDCONTATO))
+            val idContato = cursor.getInt(cursor.getColumnIndex(IDCONTATO))
             val nome = cursor.getString(cursor.getColumnIndex(NOME))
             val telefone = cursor.getString(cursor.getColumnIndex(TELEFONE))
             val idade = cursor.getInt(cursor.getColumnIndex(IDADE))

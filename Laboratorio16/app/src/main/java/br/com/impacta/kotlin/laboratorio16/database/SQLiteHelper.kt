@@ -4,10 +4,10 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
+import br.com.impacta.kotlin.laboratorio16.utils.Constantes
 
-class SQLiteHelper(context : Context, name : String,
-                   factory: SQLiteDatabase.CursorFactory?, version : Int) :
-    SQLiteOpenHelper(context, name, factory, version) {
+class SQLiteHelper(context : Context) :
+    SQLiteOpenHelper(context, Constantes.BANCO, null, Constantes.VERSAO) {
 
     private val TAG = "SQLiteHelper"
 
@@ -17,11 +17,10 @@ class SQLiteHelper(context : Context, name : String,
 
             sb.append(
                     "CREATE TABLE IF NOT EXISTS [contatos] ( " +
-                    " [idcontato] INT NOT NULL, " +
+                    " [idcontato] INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     " [nome] TEXT NOT NULL, " +
                     " [telefone] TEXT NOT NULL, " +
-                    " [idade] INT NOT NULL, " +
-                    " CONSTRAINT [] PRIMARY KEY ([idcontato])); "
+                    " [idade] INT NOT NULL ); "
             )
 
             executeSQL(sb, db)

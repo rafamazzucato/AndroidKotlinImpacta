@@ -46,7 +46,7 @@ class ContatosAdapter(val context:Context, val contatos : ArrayList<Contato>) : 
     }
 
     override fun getItemId(position: Int): Long {
-        return getItem(position).idContato
+        return getItem(position).idContato.toLong()
     }
 
     override fun getCount(): Int {
