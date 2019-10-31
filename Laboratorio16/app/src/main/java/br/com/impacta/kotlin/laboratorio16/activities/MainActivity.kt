@@ -14,7 +14,7 @@ import br.com.impacta.kotlin.laboratorio16.models.Contato
 import br.com.impacta.kotlin.laboratorio16.utils.Constantes
 import kotlinx.android.synthetic.main.tela_inicial.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Laboratorio16AbstractActivity() {
 
     private val context: Context by lazy {
         this
@@ -28,27 +28,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.tela_inicial)
     }
 
-
     override fun onResume() {
         super.onResume()
         initVars()
         initActions()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-
-        if (id == R.id.actionhugo_novo_contato) {
-            chamarTD(-1L)
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun initVars() {
@@ -61,16 +44,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initActions() {
-//        listaContatos.onItemClickListener = AdapterView.OnItemClickListener {
-//                parent, view, position, id ->
-//            val hmAux = parent.getItemAtPosition(position) as HMAux
-//            chamarTD(java.lang.Long.parseLong(hmAux[HMAux.ID]!!))
-//        }
-    }
-
-    private fun chamarTD(id: Long) {
-        val mIntent = Intent(context, DetalheActivity::class.java)
-        mIntent.putExtra(Constantes.PARAMETRO_ID, id)
-        startActivity(mIntent)
+        listaContatos.onItemClickListener = AdapterView.OnItemClickListener {
+                parent, view, position, id ->
+            val contato = parent.getItemAtPosition(position) as Contato
+            chamarTD(contato.idContato)
+        }
     }
 }

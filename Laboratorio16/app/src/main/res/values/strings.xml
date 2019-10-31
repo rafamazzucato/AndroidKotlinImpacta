@@ -8,7 +8,9 @@
     <string name="detalhes_rotulo_telefone">Telefone</string>
     <string name="detalhes_rotulo_idade">Idade</string>
     <string name="detalhes_rotulo_btn_apagar">Apagar</string>
+    <string name="detalhes_rotulo_btn_limpar">Limpar</string>
     <string name="detalhes_rotulo_btn_salvar">Salvar</string>
+    <string name="detalhes_rotulo_btn_atualizar">Atualizar</string>
     <string name="detalhes_alerta_erro_validacao">Erro: Validacao</string>
     <string name="detalhes_alerta_erro_nome_obrigatorio">Erro: Nome é obrigatorio!!!</string>
     <string name="detalhes_alerta_erro_telefone_obrigatorio">Erro: Telefone é obrigatorio!!!</string>

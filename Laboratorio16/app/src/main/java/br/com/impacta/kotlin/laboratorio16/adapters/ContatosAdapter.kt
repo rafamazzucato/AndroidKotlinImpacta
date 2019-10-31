@@ -9,7 +9,7 @@ import br.com.impacta.kotlin.laboratorio16.R
 import br.com.impacta.kotlin.laboratorio16.models.Contato
 import kotlinx.android.synthetic.main.celula_contato.view.*
 
-class ContatosAdapter(val context:Context, val contatos : ArrayList<Contato>) : BaseAdapter() {
+class ContatosAdapter(context:Context, val contatos : ArrayList<Contato>) : BaseAdapter() {
 
     /**
      * Responsavel pela conversao do arquivo de layout da celula de xml para

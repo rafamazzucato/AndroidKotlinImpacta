@@ -34,7 +34,6 @@ class SQLiteHelper(context : Context) :
             val sb = StringBuilder()
 
             sb.append("DROP TABLE IF EXISTS [contatos];")
-            sb.append("DROP TABLE IF EXISTS [contatos_n];")
 
             executeSQL(sb, db)
             onCreate(db)

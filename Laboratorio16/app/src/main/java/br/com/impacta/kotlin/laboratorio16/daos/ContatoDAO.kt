@@ -34,21 +34,21 @@ class ContatoDAO(context : Context) : DAO(context) {
         return db.update(TABELA, cv, filtro, argumentos)
     }
 
-    fun apagarContato(idcontato: Long) : Int {
+    fun apagarContato(idcontato: Int) : Int {
         val db = dbHelper.writableDatabase
         val filtro = "$IDCONTATO = ? "
         val argumentos = arrayOf(idcontato.toString())
         return db.delete(TABELA, filtro, argumentos)
     }
 
-    fun obterContatoByID(idcontato: Long): Contato? {
+    fun obterContatoByID(idcontato: Int): Contato? {
         val db = dbHelper.readableDatabase
         var cAux: Contato? = null
 
         try {
             val comando = " SELECT * FROM $TABELA WHERE $IDCONTATO = ? "
             val argumentos = arrayOf(idcontato.toString())
-            val cursor = db!!.rawQuery(comando.toLowerCase(), argumentos)
+            val cursor = db.rawQuery(comando.toLowerCase(), argumentos)
 
             if(cursor.moveToFirst()){
                 cAux = parseCursortoObject(cursor)
