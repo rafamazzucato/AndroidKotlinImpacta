@@ -22,18 +22,18 @@ class ContatosAdapter(context:Context, val contatos : ArrayList<Contato>) : Base
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var convertView = convertView
-        if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.celula_contato, parent, false)
+        var result = convertView
+        if (result == null) {
+            result = mInflater.inflate(R.layout.celula_contato, parent, false)
         }
 
         val item = getItem(position)
-        val model = SyntheticModel(convertView!!)
+        val model = SyntheticModel(result!!)
 
         model.contatoNome.text = item.nome
         model.contatoIdade.text = item.idade.toString()
 
-        return convertView
+        return result
     }
 
     class SyntheticModel(baseView: View) {
