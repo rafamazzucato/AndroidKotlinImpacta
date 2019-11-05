@@ -22,6 +22,9 @@ class HelloService : IntentService("LivroAndroid") {
         }
 
         Log.d(TAG, " << HelloService.onHandleIntent()")
+
+        val intent = Intent(this, MainActivity::class.java)
+        NotificationUtil.create(this, 1, intent, "Livro Android", "Serviço Concluído")
     }
 
     override fun onDestroy() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="br.com.impacta.kotlin.helloservice">
+          package="br.com.impacta.kotlin.laboratorio18">
 
     <application
             android:allowBackup="true"
@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service android:name=".HelloService" android:exported="false" />
-
     </application>
+
 </manifest>

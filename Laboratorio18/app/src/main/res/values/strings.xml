@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorio18</string>
+
+    <string name="telainicial_titulo">Json</string>
+    <string name="telainicial_rotulo_btn_gerar_json">Gerar JSON</string>
+    <string name="telainicial_rotulo_btn_ler_json">Ler JSON</string>
+    <string name="tag_json">json</string>
+    <string name="tag_contatos">contatos</string>
+</resources>
