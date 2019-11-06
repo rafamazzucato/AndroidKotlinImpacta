@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Laboratorio19</string>
+
+    <string name="telainicial_titulo">Lista de Contatos</string>
+    <string name="tag_contatos">contatos</string>
+</resources>
